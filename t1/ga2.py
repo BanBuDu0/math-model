@@ -250,7 +250,7 @@ class TSP(object):
     def load_Citys(self, file='china.csv', delm=';'):
         # 中国34城市经纬度
         # data = pd.read_csv(file, delimiter=delm, header=None).values
-        path = "./B题附件1.xlsx"
+        path = "data/B题附件1.xlsx"
         data = pd.read_excel(path, sheet_name=0).values
         self.citys = data[:, 1:]
         self.citys_name = list(range(30))

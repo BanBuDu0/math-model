@@ -51,8 +51,8 @@ class solution:
             print(self.max_battery_capacity + self.f)
 
     def get_data(self):
-        path1 = "./B题附件1.xlsx"
-        path2 = "./B题附件2.xlsx"
+        path1 = "data/B题附件1.xlsx"
+        path2 = "data/B题附件2.xlsx"
         df = pd.read_excel(path1, sheet_name=0)
         self.node_num = df.shape[0]
         self.node_loc = np.array(df.iloc[:, 1:3])

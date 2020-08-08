@@ -3,7 +3,7 @@ import numpy as np
 import math
 import time
 
-path = "./B题附件1.xlsx"
+path = "data/B题附件1.xlsx"
 dataframe = pd.read_excel(path, sheet_name=0)
 v = dataframe.iloc[:, 1:3]
 

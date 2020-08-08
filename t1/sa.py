@@ -7,7 +7,6 @@ from matplotlib.lines import Line2D
 
 class SA:
     def __init__(self):
-        self.df = None
         self.node_num = None
         self.node_name = None
         self.node_loc = None
@@ -19,11 +18,11 @@ class SA:
         self.e = 1.0000e-30
 
     def init(self):
-        path = "./B题附件1.xlsx"
-        self.df = pd.read_excel(path, sheet_name=0)
-        self.node_num = self.df.shape[0]
-        self.node_loc = np.array(self.df.iloc[:, 1:3])
-        self.node_name = np.array(self.df.iloc[:, 0])
+        path = "data/B题附件1.xlsx"
+        df = pd.read_excel(path, sheet_name=0)
+        self.node_num = df.shape[0]
+        self.node_loc = np.array(df.iloc[:, 1:3])
+        self.node_name = np.array(df.iloc[:, 0])
         # TODO 选择初始解为顺序排列
         self.result = np.arange(self.node_num)
         self.res_distance = self.get_result_distance(self.result)

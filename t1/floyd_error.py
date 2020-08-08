@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-path = "./B题附件1.xlsx"
+path = "data/B题附件1.xlsx"
 data = pd.read_excel(path, sheet_name=0)
 node_num = data.shape[0]
 

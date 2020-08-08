@@ -22,7 +22,7 @@ class GA:
         self.res_distance = None
 
     def init(self):
-        path = "./B题附件1.xlsx"
+        path = "data/B题附件1.xlsx"
         self.df = pd.read_excel(path, sheet_name=0)
         self.node_num = self.df.shape[0]
         self.node_loc = np.array(self.df.iloc[:, 1:3])
