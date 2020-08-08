@@ -1,0 +1,98 @@
+import pandas as pd
+import numpy as np
+import math
+
+
+class solution:
+    def __init__(self, f, v, r):
+        self.node_num = None
+        self.node_name = None
+        self.node_loc = None
+        self.result = None
+        self.res_distance = None
+        self.node_consume = None
+        self.road = [0, 21, 23, 24, 28, 22, 3, 4, 5, 13, 10, 16, 27, 12, 8, 15, 9, 7, 11, 6, 14, 25, 18, 26, 19, 20, 1,
+                     2, 17, 29]
+        self.total_dis = 407.48987719505214
+        self.f = f
+        self.v = v
+        self.r = r
+        self.max_battery_capacity = None
+        # total_consume记录当前时间点每个node的总消耗
+        self.total_consume = None
+
+    def try_do(self):
+        for _ in range(50):
+            for i in range(self.node_num):
+                # 从 i -> i + 1, 并给 i + 1 充电
+                if i == self.node_num - 1:
+                    node1 = self.node_loc[i]
+                    node2 = self.node_loc[0]
+                else:
+                    node1 = self.node_loc[i]
+                    node2 = self.node_loc[i + 1]
+                dis = self.get_distance(node1[0], node1[1], node2[0], node2[1])
+                # t1 = 在路上消耗的时间
+                t1 = dis / self.v
+                timestamp_walk_consume = self.node_consume * t1
+                self.total_consume += timestamp_walk_consume
+                # j = 充电的节点
+                if i == self.node_num - 1:
+                    j = 0
+                else:
+                    j = i + 1
+                if self.max_battery_capacity[j] < self.total_consume[j]:
+                    self.max_battery_capacity[j] = self.total_consume[j]
+                # t2 = 给 j 充电的时间
+                t2 = self.total_consume[j] / self.r
+                timestamp_charge_consume = self.node_consume * t2
+                self.total_consume += timestamp_charge_consume
+                self.total_consume[j] = 0
+            print(self.max_battery_capacity + self.f)
+
+    def get_data(self):
+        path1 = "./B题附件1.xlsx"
+        path2 = "./B题附件2.xlsx"
+        df = pd.read_excel(path1, sheet_name=0)
+        self.node_num = df.shape[0]
+        self.node_loc = np.array(df.iloc[:, 1:3])
+        self.node_name = np.array(df.iloc[:, 0])
+        df = pd.read_excel(path2, sheet_name=0)
+        temp = np.array(df.iloc[:, 3])
+        temp[0] = 0
+        self.node_consume = temp.astype(np.float64)
+        self.node_consume /= 60 * 60
+        self.max_battery_capacity = np.zeros(self.node_num)
+        self.total_consume = np.zeros(self.node_num)
+
+    def get_result_distance(self, node_array):
+        dis = 0
+        for i in range(len(node_array)):
+            if i == len(node_array) - 1:
+                node1 = node_array[i]
+                node2 = 0
+                loc1 = self.node_loc[node1]
+                loc2 = self.node_loc[node2]
+            else:
+                node1 = node_array[i]
+                node2 = node_array[i + 1]
+                loc1 = self.node_loc[node1]
+                loc2 = self.node_loc[node2]
+            dis += self.get_distance(loc1[0], loc1[1], loc2[0], loc2[1])
+        return dis
+
+    @staticmethod
+    def get_distance(x1, y1, x2, y2):
+        # x,y分别表示一个经纬度坐标点
+        if x1 == x2 and y1 == y2:
+            return 0
+        R = 6371
+        theta = math.acos(math.sin(x1) * math.sin(x2) + (math.cos(x1) * math.cos(x2) * math.cos(y1 - y2)))
+        L = theta * R
+        return L
+
+
+if __name__ == '__main__':
+    s = solution(f=40, v=4, r=0.5)
+    s.get_data()
+    s.try_do()
