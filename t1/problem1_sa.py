@@ -3,6 +3,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+import time
 
 
 class SA:
@@ -28,6 +29,7 @@ class SA:
         self.res_distance = self.get_result_distance(self.result)
 
     def run(self):
+        start = time.time()
         for i in range(self.iter_num):
             # 产生新解
             u = np.random.randint(1, high=self.node_num, size=None)
@@ -54,9 +56,13 @@ class SA:
             elif np.exp(-df / self.T) > np.random.random():
                 self.res_distance = new_dis
                 self.result = temp
-            print("第" + str(i) + "次迭代：")
-            print(self.result)
-            print(self.res_distance)
+            now = time.time()
+            if i % 100 == 0:
+                print("第" + str(i) + "次迭代：")
+                print("路径: {}".format(self.result))
+                print("距离: {}".format(self.res_distance))
+                print("运行时间：{}".format(now - start))
+                print()
             self.T = self.alpha * self.T
             if self.T < self.e:
                 break
