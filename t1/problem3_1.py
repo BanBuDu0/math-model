@@ -17,15 +17,15 @@ class MTS:
         self.area_distance = np.zeros(area_num)  # 每个区域的距离结果
         self.k1_range = [0, 3]
         self.k2_range = [-3, 0]
-        self.eta = 0.95
         self.k1 = np.random.uniform(self.k1_range[0], self.k1_range[1])
         self.k2 = np.random.uniform(self.k2_range[0], self.k2_range[1])
-        self.iter_num = 500
+        self.eta = 0.95
         self.total_iter_num = 2000
-        self.tabu_len = int(np.sqrt(406))  # sqrt(c(32,2)) = 20, c(32,2) = 406
+        self.iter_num = 500  # 每个区域禁忌搜索迭代的次数
+        self.tabu_len = int(np.sqrt(406))  # 禁忌表长度 sqrt(c(32,2)) = 20, c(32,2) = 406
         self.tabu = [i for i in range(self.tabu_len)]
         self.tabu_index = 0
-        self.can_n = 10
+        self.can_n = 10  # 每次选择的候选集大小
 
     def init(self):
         path = "data/B题附件1.xlsx"
