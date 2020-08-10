@@ -3,6 +3,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+
 class solution:
     def __init__(self, f, v, r):
         self.node_num = None
@@ -20,43 +21,6 @@ class solution:
         self.max_battery_capacity = None
         # total_consume记录当前时间点每个node的总消耗
         self.total_consume = None
-
-    #
-    # def cycle_do(self):
-    #     ii = 0
-    #     T2 = np.zeros(30)
-    #     for _ in range(20):
-    #         for i in range(self.node_num):
-    #             node_total = 0
-    #             # from i to i+1,and charge for i+1
-    #             if i == self.node_num - 1:
-    #                 node1 = self.node_loc[i]
-    #                 node2 = self.node_loc[0]
-    #             else:
-    #                 node1 = self.node_loc[i]
-    #                 node2 = self.node_loc[i + 1]
-    #                 pass
-    #             dis = self.total_dis
-    #             # t1 在路上消耗的时间
-    #             t1 = dis / self.v
-    #             # j 为充电节点
-    #             if i == self.node_num - 1:
-    #                 j = 0
-    #             else:
-    #                 j = i + 1
-    #             # t2 为节点j充电的时间
-    #             if j == 0:
-    #                 t2 = 0
-    #                 T2[j] = 0
-    #             else:
-    #                 t2 = (self.node_consume[j] * t1 + self.node_consume[j] * (np.sum(T2) - T2[j])) / (
-    #                         self.r - self.node_consume[j])
-    #                 T2[j] = t2
-    #             node_total = self.node_consume[j] * t1 + self.node_consume[j] * (np.sum(T2) - T2[j]) + self.f
-    #             if self.max_battery_capacity[j] < node_total:
-    #                 self.max_battery_capacity[j] = node_total
-    #         print(self.max_battery_capacity)
-    #     return (t1, T2, self.max_battery_capacity)
 
     def try_do(self):
         for _ in range(50):

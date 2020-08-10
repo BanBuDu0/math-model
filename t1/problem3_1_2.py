@@ -164,8 +164,6 @@ class MTS:
                     can_n_array.append(temp)
                     can_n_dis_array.append(new_dis)
                     can_num += 1
-                # else:
-                #     print("in")
             temp_index = 0
             now_best_dis = can_n_dis_array[temp_index]
             for j in range(len(can_n_dis_array)):
@@ -184,26 +182,10 @@ class MTS:
             # print("area: {}, iter: {}, distance: {},  ".format(i_area, i, self.area_distance[i_area]))
 
     def split_area(self):
-        area1 = [5, 10, 12, 13, 16, 27]
-        area2 = [3, 4, 21, 22, 23, 24, 28]
-        area3 = [17, 18, 19, 20, 25, 26, 29]
-        area4 = [1, 2, 6, 7, 8, 9, 11, 14, 15]
-        # for i in range(0, self.node_num - 1):
-        #     if self.node_loc[i][1] >= self.get_k1_y(self.node_loc[i][0]) and self.node_loc[i][1] > self.get_k2_y(
-        #             self.node_loc[i][0]):
-        #         area1.append(i)
-        #     elif self.get_k1_y(self.node_loc[i][0]) > self.node_loc[i][1] >= self.get_k2_y(self.node_loc[i][0]):
-        #         area2.append(i)
-        #     elif self.node_loc[i][1] <= self.get_k1_y(self.node_loc[i][0]) and self.node_loc[i][1] < self.get_k2_y(
-        #             self.node_loc[i][0]):
-        #         area3.append(i)
-        #     else:
-        #         area4.append(i)
         area1 = [4, 9, 11, 12, 15, 26]
         area2 = [2, 3, 20, 21, 22, 23, 27]
         area3 = [16, 17, 18, 19, 24, 25, 28]
         area4 = [0, 1, 5, 6, 7, 8, 10, 13, 14]
-
 
         self.area_nodes[0] = area1
         self.area_nodes[1] = area2
@@ -227,20 +209,6 @@ class MTS:
 
     def get_k2_y(self, x):
         return self.k2 * x + self.center_loc[1] - self.center_loc[0] * self.k2
-
-    # def get_area_distance(self, node_array):
-    #     dis = 0
-    #     dis += self.get_distance(self.center_loc[0], self.center_loc[1], node_array[0][0], node_array[0][1])
-    #     for i in range(len(node_array)):
-    #         if i == len(node_array) - 1:
-    #             loc1 = node_array[i]
-    #             loc2 = self.center_loc
-    #         else:
-    #             loc1 = node_array[i]
-    #             loc2 = node_array[i + 1]
-    #
-    #         dis += self.get_distance(loc1[0], loc1[1], loc2[0], loc2[1])
-    #     return dis
 
     def get_area_distance(self, node_array):
         dis = 0

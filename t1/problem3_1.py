@@ -89,8 +89,6 @@ class MTS:
                     can_n_array.append(temp)
                     can_n_dis_array.append(new_dis)
                     can_num += 1
-                # else:
-                #     print("in")
             temp_index = 0
             now_best_dis = can_n_dis_array[temp_index]
             for j in range(len(can_n_dis_array)):
@@ -147,20 +145,6 @@ class MTS:
 
     def get_k2_y(self, x):
         return self.k2 * x + self.center_loc[1] - self.center_loc[0] * self.k2
-
-    # def get_area_distance(self, node_array):
-    #     dis = 0
-    #     dis += self.get_distance(self.center_loc[0], self.center_loc[1], node_array[0][0], node_array[0][1])
-    #     for i in range(len(node_array)):
-    #         if i == len(node_array) - 1:
-    #             loc1 = node_array[i]
-    #             loc2 = self.center_loc
-    #         else:
-    #             loc1 = node_array[i]
-    #             loc2 = node_array[i + 1]
-    #
-    #         dis += self.get_distance(loc1[0], loc1[1], loc2[0], loc2[1])
-    #     return dis
 
     def get_area_distance(self, node_array):
         dis = 0

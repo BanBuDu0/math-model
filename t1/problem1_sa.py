@@ -75,9 +75,6 @@ class SA:
         for i in self.result:
             x.append(self.node_loc[i][0])
             y.append(self.node_loc[i][1])
-        # plt.scatter(x, y, marker='o')
-        # plt.scatter(x0, y0, marker='^', label="start point")
-        # self.result
         fig, ax = plt.subplots()
         ax.plot(x, y, 'o')
         ax.plot(x0, y0, '^')
@@ -142,6 +139,3 @@ if __name__ == '__main__':
     sa.init()
     sa.run()
     sa.draw()
-    # a = [0, 21, 23, 24, 28, 22, 3, 4, 5, 13, 10, 16, 27, 12, 8, 15, 9, 7, 11, 6, 14, 25, 18, 26, 19, 20, 1, 2, 17, 29]
-    # s = 407.48987719505214
-    # print(sa.test(a))

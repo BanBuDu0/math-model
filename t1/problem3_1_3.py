@@ -17,17 +17,6 @@ class MTS:
         self.area_nodes = [i for i in range(self.area_num)]  # 每个区域包含的节点
         self.area_result = [i for i in range(self.area_num)]  # 每个区域的路线结果
         self.area_distance = np.zeros(area_num)  # 每个区域的距离结果
-        self.k1_range = [0, 3]
-        self.k2_range = [-3, 0]
-        self.eta = 0.95
-        self.k1 = np.random.uniform(self.k1_range[0], self.k1_range[1])
-        self.k2 = np.random.uniform(self.k2_range[0], self.k2_range[1])
-        self.iter_num = 500
-        self.total_iter_num = 2000
-        self.tabu_len = int(np.sqrt(406))  # sqrt(c(32,2)) = 20, c(32,2) = 406
-        self.tabu = [i for i in range(self.tabu_len)]
-        self.tabu_index = 0
-        self.can_n = 10
 
     def init(self):
         path = "data/B题附件1.xlsx"
@@ -36,12 +25,6 @@ class MTS:
         self.center_loc = np.squeeze(np.array(df.iloc[0:1, 1:3]))
         self.node_loc = np.array(df.iloc[1:, 1:3])
         self.node_name = np.array(df.iloc[:, 0])
-
-        print("每个区域的路程: {}, {}, {}, {}, 总路程: {}".format(self.area_distance[0], self.area_distance[1],
-                                                        self.area_distance[2], self.area_distance[3],
-                                                        self.area_distance[1] + self.area_distance[2] +
-                                                        self.area_distance[0] + self.area_distance[3]))
-
         self.area_result[0] = [9, 15, 26, 12]
         self.area_result[1] = [20, 22, 23, 27, 21, 2, 3, 4]
         self.area_result[2] = [28]
@@ -131,41 +114,6 @@ class MTS:
 
         ax.plot(self.center_loc[0], self.center_loc[1], 's')
         plt.show()
-
-    def get_k1_y(self, x):
-        return self.k1 * x + self.center_loc[1] - self.center_loc[0] * self.k1
-
-    def get_k2_y(self, x):
-        return self.k2 * x + self.center_loc[1] - self.center_loc[0] * self.k2
-
-    def get_area_distance(self, node_array):
-        dis = 0
-        t = self.node_loc[node_array[0]][0]
-        t1 = self.node_loc[node_array[0]][1]
-        dis += self.get_distance(self.center_loc[0], self.center_loc[1], t,
-                                 t1)
-        for i in range(len(node_array)):
-            if i == len(node_array) - 1:
-                node1 = node_array[i]
-                loc1 = self.node_loc[node1]
-                loc2 = self.center_loc
-            else:
-                node1 = node_array[i]
-                node2 = node_array[i + 1]
-                loc1 = self.node_loc[node1]
-                loc2 = self.node_loc[node2]
-            dis += self.get_distance(loc1[0], loc1[1], loc2[0], loc2[1])
-        return dis
-
-    @staticmethod
-    def get_distance(x1, y1, x2, y2):
-        # x,y分别表示一个经纬度坐标点
-        if x1 == x2 and y1 == y2:
-            return 0
-        R = 6371
-        theta = math.acos(math.sin(x1) * math.sin(x2) + (math.cos(x1) * math.cos(x2) * math.cos(y1 - y2)))
-        L = theta * R
-        return L
 
 
 if __name__ == '__main__':
