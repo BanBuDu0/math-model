@@ -4,6 +4,7 @@ import math
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import time
+from geopy.distance import geodesic
 
 
 class SA:
@@ -109,29 +110,11 @@ class SA:
 
     @staticmethod
     def get_distance(x1, y1, x2, y2):
-        # x,y分别表示一个经纬度坐标点
-        if x1 == x2 and y1 == y2:
-            return 0
-        R = 6371
-        theta = math.acos(math.sin(x1) * math.sin(x2) + (math.cos(x1) * math.cos(x2) * math.cos(y1 - y2)))
-        L = theta * R
-        return L
-
-    def test(self, array):
-        dis = 0
-        for i in range(len(array)):
-            if i == len(array) - 1:
-                node1 = array[i]
-                node2 = 0
-                loc1 = self.node_loc[node1]
-                loc2 = self.node_loc[node2]
-            else:
-                node1 = array[i]
-                node2 = array[i + 1]
-                loc1 = self.node_loc[node1]
-                loc2 = self.node_loc[node2]
-            dis += self.get_distance(loc1[0], loc1[1], loc2[0], loc2[1])
-        return dis
+        return geodesic((y1, x1), (y2, x2)).m
+        # # x,y分别表示一个经纬度坐标点
+        # if x1 == x2 and y1 == y2:
+        #     return 0
+        # return 6370 * math.acos(math.cos(x1 - x2) * math.cos(y1) * math.cos(y2) + math.sin(y1) * math.sin(y2))
 
 
 if __name__ == '__main__':

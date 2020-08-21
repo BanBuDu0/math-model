@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5859641d32184f3aae5b225214fe25e9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5859641d32184f3aae5b225214fe25e9" ></div>
+        
+</body>
+<script>    
+    
+            var map_5859641d32184f3aae5b225214fe25e9 = L.map(
+                "map_5859641d32184f3aae5b225214fe25e9",
+                {
+                    center: [30.264411, 120.17189],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_06cf87d009d946c0a5eb161bcdd980c0 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var circle_8c7ceb77abdf4498871605ee75966479 = L.circle(
+                [30.313231, 120.234488],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_142891f2f01d4cbd9fbb937977b6a029 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9bef1afef914d1d8f7722930a7af94e = $(`<div id="html_d9bef1afef914d1d8f7722930a7af94e" style="width: 100.0%; height: 100.0%;">杭州市疾控中心</div>`)[0];
+            popup_142891f2f01d4cbd9fbb937977b6a029.setContent(html_d9bef1afef914d1d8f7722930a7af94e);
+        
+
+        circle_8c7ceb77abdf4498871605ee75966479.bindPopup(popup_142891f2f01d4cbd9fbb937977b6a029)
+        ;
+
+        
+    
+    
+            var circle_7027d54bdc154b5596d283789baed33b = L.circle(
+                [30.259154, 120.187813],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_8af28c8423224b5bbbf7005930b57c35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6226187f4e3d44b59bc099f84db11f77 = $(`<div id="html_6226187f4e3d44b59bc099f84db11f77" style="width: 100.0%; height: 100.0%;">上城区疾控中心</div>`)[0];
+            popup_8af28c8423224b5bbbf7005930b57c35.setContent(html_6226187f4e3d44b59bc099f84db11f77);
+        
+
+        circle_7027d54bdc154b5596d283789baed33b.bindPopup(popup_8af28c8423224b5bbbf7005930b57c35)
+        ;
+
+        
+    
+    
+            var circle_218dd9d9c8c54ce0a8ac496cbcf51807 = L.circle(
+                [30.268258, 120.175342],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_ecfc564b27a14a46b963b5eb4d33ddc5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bda26ddfcf5f494493a5121a917bbf2e = $(`<div id="html_bda26ddfcf5f494493a5121a917bbf2e" style="width: 100.0%; height: 100.0%;">下城区疾控中心</div>`)[0];
+            popup_ecfc564b27a14a46b963b5eb4d33ddc5.setContent(html_bda26ddfcf5f494493a5121a917bbf2e);
+        
+
+        circle_218dd9d9c8c54ce0a8ac496cbcf51807.bindPopup(popup_ecfc564b27a14a46b963b5eb4d33ddc5)
+        ;
+
+        
+    
+    
+            var circle_215c5421862542f887250c6b38c308e8 = L.circle(
+                [30.293924, 120.19825],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_68dc3ce14a9e43d3add79443276e0a96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10cc203a001d41b9adf8467bbf2aff70 = $(`<div id="html_10cc203a001d41b9adf8467bbf2aff70" style="width: 100.0%; height: 100.0%;">江干区疾控中心</div>`)[0];
+            popup_68dc3ce14a9e43d3add79443276e0a96.setContent(html_10cc203a001d41b9adf8467bbf2aff70);
+        
+
+        circle_215c5421862542f887250c6b38c308e8.bindPopup(popup_68dc3ce14a9e43d3add79443276e0a96)
+        ;
+
+        
+    
+    
+            var circle_bc7d5ffe7fdf409eba18403e20ba1de7 = L.circle(
+                [30.311997, 120.156026],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_d924e20da7084e4e91e21599c1d1795b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa50274b7ab8423b9d46be1f03981e2b = $(`<div id="html_aa50274b7ab8423b9d46be1f03981e2b" style="width: 100.0%; height: 100.0%;">拱墅区疾控中心</div>`)[0];
+            popup_d924e20da7084e4e91e21599c1d1795b.setContent(html_aa50274b7ab8423b9d46be1f03981e2b);
+        
+
+        circle_bc7d5ffe7fdf409eba18403e20ba1de7.bindPopup(popup_d924e20da7084e4e91e21599c1d1795b)
+        ;
+
+        
+    
+    
+            var circle_faf64a6d2c10449fab367615c89a694d = L.circle(
+                [30.288965, 120.070272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_ac291202bd354dddbfa801eef24a89b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_526a47c2da21493bbb7d4a15b475af2b = $(`<div id="html_526a47c2da21493bbb7d4a15b475af2b" style="width: 100.0%; height: 100.0%;">西湖区疾控中心</div>`)[0];
+            popup_ac291202bd354dddbfa801eef24a89b8.setContent(html_526a47c2da21493bbb7d4a15b475af2b);
+        
+
+        circle_faf64a6d2c10449fab367615c89a694d.bindPopup(popup_ac291202bd354dddbfa801eef24a89b8)
+        ;
+
+        
+    
+    
+            var circle_b08f662ec5e04829b68cd3892c757e4b = L.circle(
+                [30.296185, 120.386166],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_f353402c0ce345d4834da6c6a3189baf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d282edb5f304eb0a548c2fa84b3d953 = $(`<div id="html_0d282edb5f304eb0a548c2fa84b3d953" style="width: 100.0%; height: 100.0%;">钱塘新区疾控中心</div>`)[0];
+            popup_f353402c0ce345d4834da6c6a3189baf.setContent(html_0d282edb5f304eb0a548c2fa84b3d953);
+        
+
+        circle_b08f662ec5e04829b68cd3892c757e4b.bindPopup(popup_f353402c0ce345d4834da6c6a3189baf)
+        ;
+
+        
+    
+    
+            var circle_f22f58a099b4480885cd72905116bc08 = L.circle(
+                [30.200598, 120.231732],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_f0603d4e2ad94549a5c91985a455c609 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba3d155cdb494adfbd925ca5d087dc5a = $(`<div id="html_ba3d155cdb494adfbd925ca5d087dc5a" style="width: 100.0%; height: 100.0%;">滨江区疾控中心</div>`)[0];
+            popup_f0603d4e2ad94549a5c91985a455c609.setContent(html_ba3d155cdb494adfbd925ca5d087dc5a);
+        
+
+        circle_f22f58a099b4480885cd72905116bc08.bindPopup(popup_f0603d4e2ad94549a5c91985a455c609)
+        ;
+
+        
+    
+    
+            var circle_d6ff7b6a37d2474aa41ff9990fa5ea40 = L.circle(
+                [30.246203, 120.121754],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_ba86a293fe7d4054b1f0cf1ce1d7fdd2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b79a5891d5d548dd985ba9405ca7a043 = $(`<div id="html_b79a5891d5d548dd985ba9405ca7a043" style="width: 100.0%; height: 100.0%;">西湖风景名胜区疾控中心</div>`)[0];
+            popup_ba86a293fe7d4054b1f0cf1ce1d7fdd2.setContent(html_b79a5891d5d548dd985ba9405ca7a043);
+        
+
+        circle_d6ff7b6a37d2474aa41ff9990fa5ea40.bindPopup(popup_ba86a293fe7d4054b1f0cf1ce1d7fdd2)
+        ;
+
+        
+    
+    
+            var circle_1b6d9361d33b446ca2344a289d63441e = L.circle(
+                [30.150838, 120.252751],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_b7edfac8185540e6b496847e35815631 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b47e39e8ba943bebc982aba4ea2d284 = $(`<div id="html_8b47e39e8ba943bebc982aba4ea2d284" style="width: 100.0%; height: 100.0%;">萧山区疾控中心</div>`)[0];
+            popup_b7edfac8185540e6b496847e35815631.setContent(html_8b47e39e8ba943bebc982aba4ea2d284);
+        
+
+        circle_1b6d9361d33b446ca2344a289d63441e.bindPopup(popup_b7edfac8185540e6b496847e35815631)
+        ;
+
+        
+    
+    
+            var circle_1f2899f2ec694a8d87bd26f31e3970f3 = L.circle(
+                [30.402791, 120.290841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_c939b2c2f4444e289cfa4f0c7e7b2c61 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbbdbb26c31c4f84a396d93614b543e1 = $(`<div id="html_dbbdbb26c31c4f84a396d93614b543e1" style="width: 100.0%; height: 100.0%;">余杭区疾控中心</div>`)[0];
+            popup_c939b2c2f4444e289cfa4f0c7e7b2c61.setContent(html_dbbdbb26c31c4f84a396d93614b543e1);
+        
+
+        circle_1f2899f2ec694a8d87bd26f31e3970f3.bindPopup(popup_c939b2c2f4444e289cfa4f0c7e7b2c61)
+        ;
+
+        
+    
+    
+            var circle_b0f893344db1444a9f944ffb3007a15f = L.circle(
+                [30.264411, 120.17189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_a4d50b93f765408b91131e1ebecf73f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_899bb6ee1aa64d0f820a91c510e48065 = $(`<div id="html_899bb6ee1aa64d0f820a91c510e48065" style="width: 100.0%; height: 100.0%;">浙江省卫生健康委员会</div>`)[0];
+            popup_a4d50b93f765408b91131e1ebecf73f4.setContent(html_899bb6ee1aa64d0f820a91c510e48065);
+        
+
+        circle_b0f893344db1444a9f944ffb3007a15f.bindPopup(popup_a4d50b93f765408b91131e1ebecf73f4)
+        ;
+
+        
+    
+    
+            var marker_516f02115fe24843bf4be16a392c972a = L.marker(
+                [30.262953, 120.184528],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_6f861243de4649848b8acb745776d441 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d0e1df0f19b4547b8cf73dbcec94187 = $(`<div id="html_9d0e1df0f19b4547b8cf73dbcec94187" style="width: 100.0%; height: 100.0%;">浙江大学医学院附属第一医院</div>`)[0];
+            popup_6f861243de4649848b8acb745776d441.setContent(html_9d0e1df0f19b4547b8cf73dbcec94187);
+        
+
+        marker_516f02115fe24843bf4be16a392c972a.bindPopup(popup_6f861243de4649848b8acb745776d441)
+        ;
+
+        
+    
+    
+            var marker_44fea467451240bb8b32c58dd310385a = L.marker(
+                [30.256681, 120.183847],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_449ace7fd1494f30abe1c2385ee5a8bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_531df40184a943b9ac13dd4d84a3b2f8 = $(`<div id="html_531df40184a943b9ac13dd4d84a3b2f8" style="width: 100.0%; height: 100.0%;">浙江大学医学院附属第二医院</div>`)[0];
+            popup_449ace7fd1494f30abe1c2385ee5a8bf.setContent(html_531df40184a943b9ac13dd4d84a3b2f8);
+        
+
+        marker_44fea467451240bb8b32c58dd310385a.bindPopup(popup_449ace7fd1494f30abe1c2385ee5a8bf)
+        ;
+
+        
+    
+    
+            var marker_71440a038d8c4130b39b6fac55cc7adc = L.marker(
+                [30.290575, 120.174882],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_4a91a22a4fb84d2b93084aa6e3a86219 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a351150aef434149b8644cf5c4da94da = $(`<div id="html_a351150aef434149b8644cf5c4da94da" style="width: 100.0%; height: 100.0%;">浙江省人民医院</div>`)[0];
+            popup_4a91a22a4fb84d2b93084aa6e3a86219.setContent(html_a351150aef434149b8644cf5c4da94da);
+        
+
+        marker_71440a038d8c4130b39b6fac55cc7adc.bindPopup(popup_4a91a22a4fb84d2b93084aa6e3a86219)
+        ;
+
+        
+    
+    
+            var marker_477455982b36455983c8adc806b55578 = L.marker(
+                [30.262494, 120.20858],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_709956a9c7434a9793bafd073da8b557 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_641b5642259b4adabaa500ec6e6f712c = $(`<div id="html_641b5642259b4adabaa500ec6e6f712c" style="width: 100.0%; height: 100.0%;">浙江大学医学院附属邵逸夫医院</div>`)[0];
+            popup_709956a9c7434a9793bafd073da8b557.setContent(html_641b5642259b4adabaa500ec6e6f712c);
+        
+
+        marker_477455982b36455983c8adc806b55578.bindPopup(popup_709956a9c7434a9793bafd073da8b557)
+        ;
+
+        
+    
+    
+            var marker_da3e61305ad440d3be36dc2ffe2b7ac4 = L.marker(
+                [30.365376, 120.227136],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_241ea4d916784d1497f7e60cc582f645 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2c8209cb0eb4c4b9f4a2f2b2bf29ee9 = $(`<div id="html_a2c8209cb0eb4c4b9f4a2f2b2bf29ee9" style="width: 100.0%; height: 100.0%;">杭州市中医院丁桥院区</div>`)[0];
+            popup_241ea4d916784d1497f7e60cc582f645.setContent(html_a2c8209cb0eb4c4b9f4a2f2b2bf29ee9);
+        
+
+        marker_da3e61305ad440d3be36dc2ffe2b7ac4.bindPopup(popup_241ea4d916784d1497f7e60cc582f645)
+        ;
+
+        
+    
+    
+            var marker_f7c77e14a85442c1bb6d1c0c6d7e9348 = L.marker(
+                [30.327679, 120.147849],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_0e70545fb3e84178b4053a3a08b1e988 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b693076d1e564a74aa7b5716acf5cb8d = $(`<div id="html_b693076d1e564a74aa7b5716acf5cb8d" style="width: 100.0%; height: 100.0%;">杭州师范大学附属医院</div>`)[0];
+            popup_0e70545fb3e84178b4053a3a08b1e988.setContent(html_b693076d1e564a74aa7b5716acf5cb8d);
+        
+
+        marker_f7c77e14a85442c1bb6d1c0c6d7e9348.bindPopup(popup_0e70545fb3e84178b4053a3a08b1e988)
+        ;
+
+        
+    
+    
+            var marker_b814069b05454c0289b06f1de97d03f1 = L.marker(
+                [30.290507, 120.127081],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_98b5b55441b3402c9cae9b5be0ccc041 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10dd9c43029a472dabdcc243477861ec = $(`<div id="html_10dd9c43029a472dabdcc243477861ec" style="width: 100.0%; height: 100.0%;">浙江省立同德医院</div>`)[0];
+            popup_98b5b55441b3402c9cae9b5be0ccc041.setContent(html_10dd9c43029a472dabdcc243477861ec);
+        
+
+        marker_b814069b05454c0289b06f1de97d03f1.bindPopup(popup_98b5b55441b3402c9cae9b5be0ccc041)
+        ;
+
+        
+    
+    
+            var marker_7ce18c05ca134cb38190387da2b3b0d9 = L.marker(
+                [30.275299, 120.161019],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_711e4ff783a442ddb9d3a6adc8eed09b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01467bf7e40d40008a7af354e554e9c8 = $(`<div id="html_01467bf7e40d40008a7af354e554e9c8" style="width: 100.0%; height: 100.0%;">杭州市中医院</div>`)[0];
+            popup_711e4ff783a442ddb9d3a6adc8eed09b.setContent(html_01467bf7e40d40008a7af354e554e9c8);
+        
+
+        marker_7ce18c05ca134cb38190387da2b3b0d9.bindPopup(popup_711e4ff783a442ddb9d3a6adc8eed09b)
+        ;
+
+        
+    
+    
+            var marker_1970d00903dc479e99b788c4a6970f33 = L.marker(
+                [30.30673, 120.322383],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_873f38e6e60546b4bfab40954e6843f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_846743779e8f4026931ebd6c80906b3b = $(`<div id="html_846743779e8f4026931ebd6c80906b3b" style="width: 100.0%; height: 100.0%;">邵逸夫医院下沙院区</div>`)[0];
+            popup_873f38e6e60546b4bfab40954e6843f1.setContent(html_846743779e8f4026931ebd6c80906b3b);
+        
+
+        marker_1970d00903dc479e99b788c4a6970f33.bindPopup(popup_873f38e6e60546b4bfab40954e6843f1)
+        ;
+
+        
+    
+    
+            var marker_c55ebcc6ce56412cbef57e0f285ed0bd = L.marker(
+                [30.274095, 120.499095],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_a73b80fc98f9470cbf8ab85694e13bbe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2bfcabc0117407d8407c67f97800d2d = $(`<div id="html_f2bfcabc0117407d8407c67f97800d2d" style="width: 100.0%; height: 100.0%;">杭州市大江东医院</div>`)[0];
+            popup_a73b80fc98f9470cbf8ab85694e13bbe.setContent(html_f2bfcabc0117407d8407c67f97800d2d);
+        
+
+        marker_c55ebcc6ce56412cbef57e0f285ed0bd.bindPopup(popup_a73b80fc98f9470cbf8ab85694e13bbe)
+        ;
+
+        
+    
+    
+            var marker_60236df0e3ef45858063efec8a0a83c6 = L.marker(
+                [30.255508, 120.131249],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_53ac31c97c2248f191f96ecfa5d382cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_24c1d74376da402794afb181e8986c01 = $(`<div id="html_24c1d74376da402794afb181e8986c01" style="width: 100.0%; height: 100.0%;">浙江医院</div>`)[0];
+            popup_53ac31c97c2248f191f96ecfa5d382cd.setContent(html_24c1d74376da402794afb181e8986c01);
+        
+
+        marker_60236df0e3ef45858063efec8a0a83c6.bindPopup(popup_53ac31c97c2248f191f96ecfa5d382cd)
+        ;
+
+        
+    
+    
+            var marker_fe171a69b122463f9bcdee9e36d35714 = L.marker(
+                [30.162905, 120.275514],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_478f8637a6d248369d22f7c66a35cf4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e1b9fec9f314d85ac69928cbe20647c = $(`<div id="html_8e1b9fec9f314d85ac69928cbe20647c" style="width: 100.0%; height: 100.0%;">萧山区第一人民医院</div>`)[0];
+            popup_478f8637a6d248369d22f7c66a35cf4b.setContent(html_8e1b9fec9f314d85ac69928cbe20647c);
+        
+
+        marker_fe171a69b122463f9bcdee9e36d35714.bindPopup(popup_478f8637a6d248369d22f7c66a35cf4b)
+        ;
+
+        
+    
+    
+            var marker_ab6eb4c4e20f4f3587c41968e2aa9ac1 = L.marker(
+                [30.180058, 120.465479],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_acc9a640d2444f678a0c788b62331c57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7236471484049b8b1adb8e242e4f435 = $(`<div id="html_b7236471484049b8b1adb8e242e4f435" style="width: 100.0%; height: 100.0%;">萧山区第二人民医院</div>`)[0];
+            popup_acc9a640d2444f678a0c788b62331c57.setContent(html_b7236471484049b8b1adb8e242e4f435);
+        
+
+        marker_ab6eb4c4e20f4f3587c41968e2aa9ac1.bindPopup(popup_acc9a640d2444f678a0c788b62331c57)
+        ;
+
+        
+    
+    
+            var marker_95028107753e4a95afa1833e6af4d39c = L.marker(
+                [30.405891, 120.312289],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_efcbdab785ed48969b245ef8e3e642c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fcb085315044414fbc9b4355d4a366fc = $(`<div id="html_fcb085315044414fbc9b4355d4a366fc" style="width: 100.0%; height: 100.0%;">余杭区第一人民医院</div>`)[0];
+            popup_efcbdab785ed48969b245ef8e3e642c6.setContent(html_fcb085315044414fbc9b4355d4a366fc);
+        
+
+        marker_95028107753e4a95afa1833e6af4d39c.bindPopup(popup_efcbdab785ed48969b245ef8e3e642c6)
+        ;
+
+        
+    
+    
+            var marker_4ca22281051a4c758772b63bb28b3121 = L.marker(
+                [30.275697, 119.94684],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_9524c545c31949ca8d5164bd7184000d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b88abab550646419f01daef54305474 = $(`<div id="html_9b88abab550646419f01daef54305474" style="width: 100.0%; height: 100.0%;">余杭区第二人民医院</div>`)[0];
+            popup_9524c545c31949ca8d5164bd7184000d.setContent(html_9b88abab550646419f01daef54305474);
+        
+
+        marker_4ca22281051a4c758772b63bb28b3121.bindPopup(popup_9524c545c31949ca8d5164bd7184000d)
+        ;
+
+        
+    
+    
+            var marker_f0ad0d4a06ea49748c6adfb89427c427 = L.marker(
+                [30.216278, 120.221588],
+                {}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+        var popup_750a8ffed21247d8af288d037581e040 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1da081eb3d9a4aaeabbc542b73e71268 = $(`<div id="html_1da081eb3d9a4aaeabbc542b73e71268" style="width: 100.0%; height: 100.0%;">杭州武警医院</div>`)[0];
+            popup_750a8ffed21247d8af288d037581e040.setContent(html_1da081eb3d9a4aaeabbc542b73e71268);
+        
+
+        marker_f0ad0d4a06ea49748c6adfb89427c427.bindPopup(popup_750a8ffed21247d8af288d037581e040)
+        ;
+
+        
+    
+    
+            var poly_line_f6ccaff05c99471fb875520d398089f8 = L.polyline(
+                [[30.180058, 120.465479], [30.296185, 120.386166], [30.274095, 120.499095]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_31c7de6edeaa49559c20fbfda23d8fa4 = L.polyline(
+                [[30.162905, 120.275514], [30.150838, 120.252751]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_a9fd554d15a54f42bc486ccdc92fe691 = L.polyline(
+                [[30.216278, 120.221588], [30.200598, 120.231732]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_2be9b7d5a27541b190c5463e2e29ed9a = L.polyline(
+                [[30.405891, 120.312289], [30.402791, 120.290841], [30.365376, 120.227136]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_ae086d97362a4e48abaf92a39fa8a836 = L.polyline(
+                [[30.275697, 119.94684], [30.288965, 120.070272], [30.290507, 120.127081]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_34b6ad30752f4361a33293c623fc7c5d = L.polyline(
+                [[30.30673, 120.322383], [30.313231, 120.234488]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_6f540ca35a264a71bfb21c1fcb6bdf0a = L.polyline(
+                [[30.290575, 120.174882], [30.293924, 120.19825], [30.262494, 120.20858]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_75339cabf40f4437aceb2b5dfa867b86 = L.polyline(
+                [[30.255508, 120.131249], [30.246203, 120.121754]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_aa5525a3ea804c6a836e272be0a739db = L.polyline(
+                [[30.327679, 120.147849], [30.311997, 120.156026]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_478a165c70b94a5e97870245a866829d = L.polyline(
+                [[30.275299, 120.161019], [30.268258, 120.175342], [30.262953, 120.184528]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+    
+            var poly_line_491b94e453704ec7902038b6ff1a7144 = L.polyline(
+                [[30.256681, 120.183847], [30.259154, 120.187813]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5859641d32184f3aae5b225214fe25e9);
+        
+</script>

@@ -268,10 +268,12 @@ class TSP(object):
 
     def ct_distance(self, x, y):
         # x,y分别表示一个经纬度坐标点
-        R = 6371
-        theta = math.acos(math.sin(x[0]) * math.sin(y[0]) + (math.cos(x[0]) * math.cos(y[0]) * math.cos(x[1] - y[1])))
-        L = theta * R
-        return L
+        return 6370 * math.acos(math.cos(x[0] - y[0]) * math.cos(x[1]) * math.cos(y[1]) + math.sin(x[1]) * math.sin(y[1]))
+    # def ct_distance(self, x1, y1, x2, y2):
+    #     # x,y分别表示一个经纬度坐标点
+    #     if x1 == x2 and y1 == y2:
+    #         return 0
+    #     return 6370 * math.acos(math.cos(x1 - x2) * math.cos(y1) * math.cos(y2) + math.sin(y1) * math.sin(y2))
 
     # def ct_distance(self, city1, city2):
     #     d = np.sqrt((city1[0] - city2[0]) ** 2 + (city1[1] - city2[1]) ** 2)

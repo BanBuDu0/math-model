@@ -185,11 +185,6 @@ class Solution:
                         res_flag.append(True)
                         res_capacity.append(remain)
                         all_node.remove(all_node[v])
-                        # if len(all_node) == 0:
-                        #     res.append(all_node[0].id)
-                        #     res_flag.append(False)
-                        #     res_capacity.append(all_node[0].cap)
-                        #     return res, res_flag, res_capacity
                         break
                     else:
                         remain -= all_node[v].cap
@@ -281,5 +276,4 @@ class Node:
 
 if __name__ == '__main__':
     solution = Solution()
-    # solution.test()
     solution.run()
