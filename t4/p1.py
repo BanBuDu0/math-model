@@ -1,5 +1,5 @@
 import random
-import os
+import os, sys
 
 
 class LifeGame:
@@ -26,7 +26,6 @@ class LifeGame:
         return len(list(filter(lambda x: x == '#', nearby)))
 
     def print_screen(self):
-        os.system('cls')
         for i in self.screen:
             for j in i:
                 print(j, end=' ')
